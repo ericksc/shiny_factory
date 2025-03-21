@@ -1,0 +1,14 @@
+{
+  "name": "Shiny Development Environment",
+  "image": "rocker/shiny:latest",
+  "settings": {
+    "r.rpath.linux": "/usr/local/bin/R"
+  },
+  "extensions": [
+    "Ikuyadeu.r"
+  ],
+  "forwardPorts": [
+    3838
+  ],
+  "postCreateCommand": "Rscript -e 'install.packages(c(\"shiny\", \"rmarkdown\"), repos=\"http://cran.rstudio.com\")'"
+}
